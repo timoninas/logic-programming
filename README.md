@@ -1,3 +1,6 @@
+![](https://img.shields.io/badge/Language-Prolog-ff69b4)
+![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)
+
 # Логическое программирование; МГТУ; 6 семестр 
 
 ## Лабораторные работы по Prolog
