@@ -10,3 +10,7 @@
 | --- | --- | --- | --- | --- |
 | :one: | Задание по Prolog 1 | [Код](https://github.com/timoninas/logic-programming/blob/master/lab_01/domains.pro) | [Отчет]() | :negative_squared_cross_mark: |
 | :two: | Задание по Prolog 2 | [Код]() | [Отчет]() | :negative_squared_cross_mark: |
+
+## 
+
+**p(X) :- r(X).x значит: предикат p(X) будет успешен, если успешен предикат r(X)**
