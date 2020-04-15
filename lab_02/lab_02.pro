@@ -39,16 +39,16 @@ clauses
 
 goal
 	% Facts: Check institute
-	%educational(FirstName, LastName, "BMSTU").
+	educational(FirstName, LastName, "BMSTU").
 	
 	% Facts: Check group and institute
-	%grpNedu(LastName, 2, "BMSTU").
+	grpNedu(LastName, 2, "BMSTU").
 	
 	% Facts: Check excellent pupils
-	%excellentPupil(FirstName, LastName, 5).
+	excellentPupil(FirstName, LastName, 5).
 	
 	% Pravila: Check institute
-	%praviloEDU(FirstName, LastName).
+	praviloEDU(FirstName, LastName).
 	
 	% Pravila: Check bad pupils
 	badPup(FirstName, LastName, AverageMark).
