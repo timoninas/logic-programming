@@ -8,14 +8,15 @@
 
 | :1234: | Описание | Код | Отчет | :information_source: |
 | --- | --- | --- | --- | --- |
-| :one: | Задание по Prolog 1 | [Код](https://github.com/timoninas/logic-programming/blob/master/lab_01/domains.pro) | [Отчет]() | :negative_squared_cross_mark: |
-| :two: | Задание по Prolog 2 | [Код]() | [Отчет]() | :negative_squared_cross_mark: |
+| :one: | Разобраться со средой Visual Prolog | Код | [Отчет](https://github.com/timoninas/logic-programming/blob/master/lab_01/report/lab_01.pdf) | :negative_squared_cross_mark: |
+| :two: | Создать базу знаний студентов с помощью фактов, правил| [Код](https://github.com/timoninas/logic-programming/blob/master/lab_02/lab_02.pro) | [Отчет](https://github.com/timoninas/logic-programming/blob/master/lab_02/report/lab_02.pdf) | :negative_squared_cross_mark: |
 
-## 
+## Обучение
+
 
 **p(X) :- r(X). значит: предикат p(X) будет успешен, если успешен предикат r(X)**
 
-## 
+____
 
 ```Prolog
 q(7). q(3). q(2).
@@ -29,3 +30,5 @@ r(8). r(5).
 **Предикат - succeed всегда успешен, поэтому в 
 случае неуспеха в поиске пар чисел больше десяти, поиск пар не прервется, а 
 сработает succeed**
+
+____
