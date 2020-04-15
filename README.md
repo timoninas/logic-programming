@@ -8,7 +8,7 @@
 
 | :1234: | Описание | Код | Отчет | :information_source: |
 | --- | --- | --- | --- | --- |
-| :one: | Разобраться со средой Visual Prolog | Nah | [Отчет](https://github.com/timoninas/logic-programming/blob/master/lab_01/report/lab_01.pdf) | :negative_squared_cross_mark: |
+| :one: | Разобраться со средой Visual Prolog | [Nah]() | [Отчет](https://github.com/timoninas/logic-programming/blob/master/lab_01/report/lab_01.pdf) | :negative_squared_cross_mark: |
 | :two: | Создать базу знаний студентов с помощью фактов, правил| [Код](https://github.com/timoninas/logic-programming/blob/master/lab_02/lab_02.pro) | [Отчет](https://github.com/timoninas/logic-programming/blob/master/lab_02/report/lab_02.pdf) | :negative_squared_cross_mark: |
 
 ## Обучение
