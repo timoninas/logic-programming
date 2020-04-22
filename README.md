@@ -12,7 +12,7 @@
 | :one: | Разобраться со средой Visual Prolog | [Код](https://github.com/timoninas/logic-programming/blob/master/lab_01/lab_01.pro) | [Отчет](https://github.com/timoninas/logic-programming/blob/master/lab_01/report/lab_01.pdf) | :white_check_mark: |
 | :two: | Создать базу знаний студентов с помощью фактов, правил| [Код](https://github.com/timoninas/logic-programming/blob/master/lab_02/lab_02.pro) | [Отчет](https://github.com/timoninas/logic-programming/blob/master/lab_02/report/lab_02.pdf) | :white_check_mark: |
 | :three: | Создать базу знаний: записи, владельцы машин, счета в банке | [Код](https://github.com/timoninas/logic-programming/blob/master/lab_03/lab_03.pro) | [Отчет](https://github.com/timoninas/logic-programming/blob/master/lab_03/report/lab_03.pdf) | :white_check_mark: |
-| :four: | Использование конъюнктивного правила и простого вопроса | [Код](https://github.com/timoninas/logic-programming/blob/master/lab_04/lab_04.pro) | [Отчет](https://github.com/timoninas/logic-programming/blob/master/lab_04/report/lab_04.pdf) | :negative_squared_cross_mark: |
+| :four: | Использование конъюнктивного правила и простого вопроса | [Код](https://github.com/timoninas/logic-programming/blob/master/lab_04/lab_04.pro) | [Отчет](https://github.com/timoninas/logic-programming/blob/master/lab_04/report/lab_04.pdf) | :white_check_mark: |
 
 ## Обучение
 
