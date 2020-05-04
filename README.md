@@ -15,6 +15,10 @@
 | :four: | Использование конъюнктивного правила и простого вопроса | [Код](https://github.com/timoninas/logic-programming/blob/master/lab_04/lab_04.pro) | [Отчет](https://github.com/timoninas/logic-programming/blob/master/lab_04/report/lab_04.pdf) | :white_check_mark: |
 | :five: | Создание и использование вариативных типов данных | [Код](https://github.com/timoninas/logic-programming/blob/develop/lab_05/lab_05.pro) | [Отчет](https://github.com/timoninas/logic-programming/blob/develop/lab_05/lab_05.pdf) | :white_check_mark: |
 | :six: | Использование правил в программе на Prolog | [Код](https://github.com/timoninas/logic-programming/blob/develop/lab_06/lab_06.pro) | [Отчет](https://github.com/timoninas/logic-programming/blob/develop/lab_06/lab_06.pdf) | :white_check_mark: |
+| :seven: | Формирование эффективных программ на Prolog | [Код](https://github.com/timoninas/logic-programming/blob/develop/lab_07/lab_07.pro) | [Отчет](https://github.com/timoninas/logic-programming/blob/develop/lab_07/lab_07.pdf) | :white_check_mark: |
+| :eight: | Рекурсия на Prolog | [Код](https://github.com/timoninas/logic-programming/blob/develop/lab_08/lab_08.pro) | [Отчет](https://github.com/timoninas/logic-programming/blob/develop/lab_08/lab_08.pdf) | :white_check_mark: |
+| :nine: | Обработка списков на Prolog| [Код](https://github.com/timoninas/logic-programming/blob/develop/lab_09/lab_09.pro) | [Отчет](https://github.com/timoninas/logic-programming/blob/develop/lab_09/lab_09.pdf) | :white_check_mark: |
+| :zero: | Формирование и модификация списков на Prolog| [Код](https://github.com/timoninas/logic-programming/blob/develop/lab_10/lab_10.pro) | [Отчет](https://github.com/timoninas/logic-programming/blob/develop/lab_10/lab_10.pdf) | :white_check_mark: |
 
 
 
