@@ -1,18 +1,29 @@
 
 domains
 	lastname, phone, city, street = symbol.
-	house, flat, price = integer.
-	brand, color = symbol.
+	house, flat, area, acres, price = integer.
+	typeOfOwn, type, brand, color = symbol.
 	bank = symbol.
-	account, amount = integer.
+	account, amount, sumPrice = integer.
 	address = addres(city, street, house, flat).
+	ownership = car(brand, color, price);
+		    building(area, type, price);
+		    plot(acres, type, price);
+		    boat(brand, type, color, price).
+		    
 
 predicates
 	nondeterm phone_notice(lastname, phone, address).
-	nondeterm car(lastname, city, brand, color, price).
 	nondeterm bank_investors(lastname, city, bank, account, amount).
+	nondeterm owner(lastname, city, ownership).
 	
-	nondeterm findUsingBrandColor(brand, color, lastname, city, phone, bank).
+	nondeterm allOwners(lastname, city, typeOfOwn, price).
+	nondeterm allOwners(lastname, city, typeOfOwn).
+	nondeterm priceCar(lastname, city, price).
+	nondeterm priceBuilding(lastname, city, price).
+	nondeterm pricePlot(lastname, city, price).
+	nondeterm priceBoat(lastname, city, price).
+	nondeterm summaryPrice(lastname, city, sumPrice).
 
 clauses
 	phone_notice("Timonin", "7090898286725", addres("Moscow", "Sovetskaya", 2, 37)).
@@ -39,23 +50,51 @@ clauses
 	bank_investors("Laprival", "Vologda", "TINKOFF", 134000, 6000000).
 	bank_investors("Ibragimov", "Vologda", "VTB", 10, 250).
 	
-	car("Timonin", "Moscow", "BMW", "white", 1000).
-	car("Timonin", "Moscow", "ESKALATE", "black", 1000).
-	car("Foreman", "Orenburg", "ESKALATE", "black", 1000).
-	car("Orevsji", "Kikalami", "ESKALATE", "orange", 1000).
-	car("Orevsji", "Vologda", "Ferrari", "lightgray", 1000).
-	car("Joker", "Acrham", "Lamborgini", "purple", 1000).
-	car("Orevsji", "Kikalami", "Ferrari", "white", 1000).
-	car("Nebrogov", "World", "BMW", "black", 178000).
-	car("Nebrogov",  "World", "Ferrari", "red", 210000).
-	car("Ibragimov", "Vologda", "VELOSIPED", "red", 1000).
+	
+	%owner(lastname, city, ownership)
+	owner("Timonin", "Moscow", car("BMW", "red", 50000)).
+	owner("Timonin", "Vologda", building(175, "Real", 125000)).
+	owner("Timonin", "Moscow", building(175, "Real", 125000)).
+	owner("Timonin", "Moscow", boat("BMX", "123", "Red", 1)).
+	owner("Ibragimov", "Vologda", plot(200, "Real", 12342)).
+	owner("Sardyn", "Orksk", building(213, "Unreal", 11111)).
+	owner("Koverap", "Dnepr", boat("BMX", "123", "Red", 1290)).
+	owner("Nebrogov", "Rytia", boat("KOL", "Real", "Green", 90000)).
 	
 	
-	% FOR Brand, Color FIND Lastname, City, Phone, Bank, 
-	% where car owner is bank investor
-	findUsingBrandColor(Brand, Color, Lastname, City, Phone, Bank) :-
-		phone_notice(Lastname, Phone, _),
-		car(Lastname, City, Brand, Color, _),
-		bank_investors(Lastname, City, Bank, _, _).
+	allOwners(Lastname, City, Ownership, Price) :- 
+			owner(Lastname, City, car(_, _, Price)), Ownership = "Car".
+	allOwners(Lastname, City, Ownership, Price) :- 
+			owner(Lastname, City, building(_, _, Price)), Ownership = "Building".
+	allOwners(Lastname, City, Ownership, Price) :- 
+			owner(Lastname, City, plot(_, _, Price)), Ownership = "Plot".
+	allOwners(Lastname, City, Ownership, Price) :- 
+			owner(Lastname, City, boat(_, _, _, Price)), Ownership = "Boat".
+			
+	allOwners(Lastname, City, Ownership) :- 
+			allOwners(Lastname, City, Ownership, _).
+			
+	priceCar(Lastname, City, Price) :- owner(Lastname, City, car(_, _, Price)),!.
+	priceCar(_, _, 0).
+	
+	priceBuilding(Lastname, City, Price) :- owner(Lastname, City, building(_, _, Price)),!.
+	priceBuilding(_, _, 0).
+	
+	pricePlot(Lastname, City, Price) :- owner(Lastname, City, plot(_, _, Price)),!.
+	pricePlot(_, _, 0).
+
+	priceBoat(Lastname, City, Price) :- owner(Lastname, City, boat(_, _, _, Price)),!.
+	priceBoat(_, _, 0).
+	
+	summaryPrice(Lastname, City, SumPrice) :-
+			priceCar(Lastname, City, CarPrice),
+			priceBuilding(Lastname, City, BuildingPrice),
+			pricePlot(Lastname, City, PlotPrice),
+			priceBoat(Lastname, City, BoatPrice),
+			SumPrice = CarPrice + BuildingPrice + PlotPrice + BoatPrice.
+	
 goal
-	findUsingBrandColor("VELOSIPED", "black", Lastname, City, Phone, Bank).
+	allOwners("Timonin", "Moscow", Ownership).
+	
+	%summaryPrice("Timonin", City, SumPrice).
+	
