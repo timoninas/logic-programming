@@ -14,6 +14,10 @@
 | :three: | Создать базу знаний: записи, владельцы машин, счета в банке | [Код](https://github.com/timoninas/logic-programming/blob/master/lab_03/lab_03.pro) | [Отчет](https://github.com/timoninas/logic-programming/blob/master/lab_03/report/lab_03.pdf) | :white_check_mark: |
 | :four: | Использование конъюнктивного правила и простого вопроса | [Код](https://github.com/timoninas/logic-programming/blob/master/lab_04/lab_04.pro) | [Отчет](https://github.com/timoninas/logic-programming/blob/master/lab_04/report/lab_04.pdf) | :white_check_mark: |
 | :five: | Создание и использование вариативных типов данных | [Код](https://github.com/timoninas/logic-programming/blob/develop/lab_05/lab_05.pro) | [Отчет](https://github.com/timoninas/logic-programming/blob/develop/lab_05/lab_05.pdf) | :white_check_mark: |
+| :six: | Использование правил в программе на Prolog | [Код](https://github.com/timoninas/logic-programming/blob/develop/lab_06/lab_06.pro) | [Отчет](https://github.com/timoninas/logic-programming/blob/develop/lab_06/lab_06.pdf) | :white_check_mark: |
+
+
+
 
 ## Обучение
 
