@@ -42,6 +42,10 @@ clauses
 			Max = Num3.
 	
 goal
+	%
+	% FOR 2 NUMBERS
+	%
+	
 	write("Max2 s otsecheniem\n"),
 	write("max(2, 1): "),
 	maxOf2c(2, 1, Max);
