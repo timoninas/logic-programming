@@ -10,6 +10,11 @@ predicates
 	nondeterm mother(parent, predok).
 	
 	nondeterm allGrandMa(children, predok).
+	nondeterm allGrandDa(children, predok).
+	nondeterm allGrand(children, predok).
+	nondeterm mothersMama(children, predok).
+	nondeterm mothersPapa(children, predok).
+	nondeterm mothersMaPa(children, predok).
 
 clauses
 	father(person("Anton", "Lomin"), person("Sergio", "Lomin")).
@@ -33,6 +38,40 @@ clauses
 	allGrandMa(Children, Babushka) :- 
 		mother(Children, Mother),
 		mother(Mother, Babushka).
+		
+	allGrandDa(Children, Dedushka) :-
+		father(Children, Papa),
+		father(Papa, Dedushka).
+		
+	allGrandDa(Children, Dedushka) :-
+		mother(Children, Mama),
+		father(Mama, Dedushka).
+		
+	allGrand(Children, Babushka) :-
+		allGrandMa(Children, Babushka).
+		
+	allGrand(Children, Dedushka) :-
+		allGrandDa(Children, Dedushka).
+		
+	mothersMama(Children, BabushkaForMa) :-
+		mother(Children, Mama),
+		mother(Mama, BabushkaForMa).
+		
+	mothersPapa(Children, DedushkaForMa) :-
+		mother(Children, Mama),
+		father(Mama, DedushkaForMa).
+		
+	mothersMaPa(Children, Babushka) :-
+		mothersMama(Children, Babushka).
+		
+	mothersMaPa(Children, Dedushka) :-
+		mothersPapa(Children, Dedushka).
+		
 				
 goal
-	allGrandMa(person("Anton", "Lomin"), Grandma).
+	%allGrandMa(person("Anton", "Lomin"), Grandma).
+	%allGrandDa(person("Anton", "Lomin"), Dedushka).
+	%allGrand(person("Anton", "Lomin"), GrandMaPa).
+	%mothersMama(person("Anton", "Lomin"), BabushkaForMa).
+	mothersMaPa(person("Anton", "Lomin"), GrandMaPaForMothersLine).
+	
