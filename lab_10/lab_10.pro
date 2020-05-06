@@ -23,7 +23,8 @@ clauses
 	isAbove(CompNum, Num) :- CompNum > Num, !.
 	
 	newListAboveNum([], _, Result):-Result = [],!.
-	newListAboveNum([Head|Tail], Num, [Head|NewTail]) :- isAbove(Head, Num), newListAboveNum(Tail, Num, NewTail), !.
+	newListAboveNum([Head|Tail], Num, [Head|NewTail]) :- isAbove(Head, Num), 
+							     newListAboveNum(Tail, Num, NewTail), !.
 	newListAboveNum([_|Tail], Num, NewTail) :-  newListAboveNum(Tail, Num, NewTail), !.
 	
 	
@@ -32,21 +33,30 @@ clauses
     		B = A mod 2, B = -1, !.
 	
 	newListEvenPos(_, [], Result):-Result = [],!.
-	newListEvenPos(Index, [Head|Tail], [Head|NewTail]) :- oddp(Index), NewIndex = Index+1, newListEvenPos(NewIndex, Tail, NewTail), !.
-	newListEvenPos(Index, [_|Tail], NewTail) :-  NewIndex = Index+1, newListEvenPos(NewIndex, Tail, NewTail), !.
+	newListEvenPos(Index, [Head|Tail], [Head|NewTail]) :- oddp(Index), 
+							      NewIndex = Index+1, 
+							      newListEvenPos(NewIndex, Tail, NewTail), 
+							      !.
+							      
+	newListEvenPos(Index, [_|Tail], NewTail) :-  NewIndex = Index+1, 
+						     newListEvenPos(NewIndex, Tail, NewTail), 
+						     !.
 	
 	
 	deleteNumInList([], _, Result):-Result = [],!.
 	deleteNumInList([Head|Tail], Num, [Head|NewTail]) :- Head <> Num, 
 							     deleteNumInList(Tail, Num, NewTail), !.
+							     
 	deleteNumInList([_|Tail], Num, NewTail) :-  deleteNumInList(Tail, Num, NewTail), !.
 	
 	removeRepeatedElements(_,[],[]).
 	removeRepeatedElements(ElemSet,[ElemSet | Tail], NewSet) :- 
 				removeRepeatedElements(ElemSet, Tail, NewSet).
 				
-	removeRepeatedElements(ElemSet, [CheckElem | Tail], [CheckElem | NewTail]) :- ElemSet<>CheckElem, 
-										      removeRepeatedElements(ElemSet, Tail, NewTail).
+	removeRepeatedElements(ElemSet, [CheckElem | Tail], 
+					[CheckElem | NewTail]) :- 
+							ElemSet<>CheckElem, 
+							removeRepeatedElements(ElemSet, Tail, NewTail).
  
 	makeSet([], Result):- Result = [], !.
 	makeSet([Head|Tail],[Head| NewTail]) :- removeRepeatedElements(Head, Tail, Set), 
