@@ -1,7 +1,7 @@
 ![Language](https://img.shields.io/badge/Language-Prolog-79414F)
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)
 
-# Логическое программирование; МГТУ; 6 семестр 
+# Логическое программирование; МГТУ; 6 семестр 🤙
 
 ## Лабораторные работы по Prolog
 
